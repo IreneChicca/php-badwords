@@ -1,8 +1,9 @@
 <?php 
 
 
-$testo = $_GET["text"]
+$testo = $_GET["text"];
 
+$badw = $_GET["badword"];
 
 
 ?>
@@ -17,7 +18,10 @@ $testo = $_GET["text"]
 </head>
 <body>
     
-<h1> <?php $testo ?> </h1>
-<h1> <?php $bw ?> </h1>
+<h2>Il tuo testo è: <br><br> <?php echo $testo ?> </h2>
+<h3>ed è lungo <?php echo strlen($testo) ?> caratteri </h3>
+
+<h2>Il tuo nuovo testo è: <br><br> <?php echo str_replace($badw, '***' ,$testo )  ?> </h2>
+<h3>ed è lungo <?php echo strlen($testo) ?> caratteri </h3>
 </body>
 </html>
